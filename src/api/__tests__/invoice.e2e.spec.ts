@@ -3,7 +3,7 @@ import request from "supertest";
 
 import { Id } from "../../modules/@shared/domain/value-object/id.value-object";
 import { Address } from "../../modules/invoice/domain/address.value-object";
-import { Product } from "../../modules/invoice/domain/product";
+import { InvoiceItems } from "../../modules/invoice/domain/InvoiceItems";
 import { Invoice } from "../../modules/invoice/domain/invoice";
 import { InvoiceRepository } from "../../modules/invoice/repository/invoice.repository";
 
@@ -26,13 +26,13 @@ describe("E2E test for invoice", () => {
       zipCode: "122343404",
     });
 
-    const product1 = new Product({
+    const product1 = new InvoiceItems({
       id: new Id("1"),
       name: "Product 1",
       price: 100,
     });
 
-    const product2 = new Product({
+    const product2 = new InvoiceItems({
       id: new Id("2"),
       name: "Product 2",
       price: 200,

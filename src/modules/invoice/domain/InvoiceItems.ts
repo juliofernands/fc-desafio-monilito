@@ -8,7 +8,7 @@ type ProductProps = {
   price: number;
 };
 
-export class Product extends BaseEntity implements AggregateRoot {
+export class InvoiceItems  extends BaseEntity implements AggregateRoot {
   private _name: string;
   private _price: number;
 

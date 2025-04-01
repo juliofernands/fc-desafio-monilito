@@ -1,7 +1,7 @@
 import { Id } from "../../../@shared/domain/value-object/id.value-object";
 import { Address } from "../../domain/address.value-object";
 import { Invoice } from "../../domain/invoice";
-import { Product } from "../../domain/product";
+import { InvoiceItems } from "../../domain/InvoiceItems";
 import { FindInvoiceUseCase } from "./find-invoice.usecase";
 
 const address = new Address({
@@ -13,13 +13,13 @@ const address = new Address({
   zipCode: "122343404",
 });
 
-const product1 = new Product({
+const product1 = new InvoiceItems({
   id: new Id("1"),
   name: "Product 1",
   price: 100,
 });
 
-const product2 = new Product({
+const product2 = new InvoiceItems({
   id: new Id("2"),
   name: "Product 2",
   price: 200,
